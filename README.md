@@ -1,2 +1,33 @@
 # fuep
-fuep helps front-end engineers manage reusable code fragments by building material libraries
+fuep通过构建物料库，来帮助前端工程师管理可复用的代码片段。
+
+## 快速上手
+生成的代码依赖于：
+- vue3.0
+- element plus或vant
+- windicss
+
+使用windicss的好处在于，一方面物料之间不会由于自定义的class而产生样式覆盖的情况，其次windicss能帮你更好地管理css，它会根据使用到的class进行按需引入，如果你没有使用过我强烈建议你尝试一下。
+如果实在不想引入windicss，只想简单地使用一下fuep的代码片段，你可以在index.html中引入这行代码，来动态地导入使用到的class。
+
+```
+<script src="https://unpkg.com/windicss-runtime-dom"></script>
+```
+
+这是windicss的运行时，通过运行时来导入使用到的css，它会有一定的性能损耗。如果你希望得到更快的加载速度，根据[windicss](https://www.npmjs.com/package/windicss)的文档在工程中进行配置。
+
+## 新增物料
+新增物料，有两种方式：
+- 集成式物料
+- 组合式物料
+
+集成式物料，就是根据你上传的代码片段生成一个物料。请注意，上传的代码应该是一个vue的单文件组件，不要有额外的依赖。也尽量不要加入额外的业务逻辑。你可以在我的物料 -> 新增集成式物料 找到这个功能。
+
+组合式物料，你可以点击UI库的基础组件来生成一个组件的代码片段，并且可以通过可视化布局对这些代码片段进行组合生成你所希望的布局。
+
+### 反馈
+QQ群：1063873660
+
+在线反馈：[FAQ](https://support.qq.com/products/316906)
+
+> 尽管目前提供的配置项中支持生成vue2.0的代码，但是由于element plus的部分组件2.0时没有而且语法也不相同，所以不能完全保证生成的代码能在2.0的环境下跑起来。
